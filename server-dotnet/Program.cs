@@ -1,5 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://localhost:5080");
 builder.Services.AddControllers();
 builder.Services.AddCors(options => options.AddPolicy("Ecommerce", policy =>
     policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
